@@ -30,12 +30,11 @@
         android:layout_marginBottom="20dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Layout1Name"
+        android:id="@+id/Layout2Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
         app:endIconCheckable="true"
-        app:startIconDrawable="@drawable/user"
         app:startIconTint="#283593">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -52,7 +51,6 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         app:endIconCheckable="true"
-        app:startIconDrawable="@drawable/"
         app:startIconTint="#283593">
 
         <com.google.android.material.textfield.TextInputEditText
