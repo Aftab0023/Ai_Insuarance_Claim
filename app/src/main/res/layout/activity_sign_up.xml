@@ -1,105 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#9C27B0"
-    android:padding="16dp">
+    android:padding="20dp"
+    android:background="#FFFFFF">
 
-    <!-- App Icon -->
-    <ImageView
-        android:id="@+id/app_icon"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="App Icon" />
-
-    <!-- Sign Up Title -->
     <TextView
-        android:id="@+id/signup_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textColor="@android:color/white"
+        android:text="Welcome Back"
         android:textSize="24sp"
-        android:layout_marginBottom="32dp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
 
-    <!-- Username Field -->
-    <EditText
-        android:id="@+id/username_field"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Username"
-        android:background="@drawable/round"
-        android:padding="12dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        android:layout_marginBottom="16dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your credentials to Sign Up"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
 
-    <!-- Email Field -->
-    <EditText
-        android:id="@+id/email_field"
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Layout1Name"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:hint="Email"
-        android:background="@drawable/round"
-        android:padding="12dp"
-        android:inputType="textEmailAddress"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        android:layout_marginBottom="16dp" />
+        app:endIconCheckable="true"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text"
+        app:startIconTint="#283593">
 
-    <!-- Password Field -->
-    <EditText
-        android:id="@+id/password_field"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Layout1Password"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:hint="Password"
-        android:background="@drawable/round"
-        android:padding="12dp"
-        android:inputType="textPassword"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginTop="10dp"
+        app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:startIconTint="#283593">
 
-    <!-- Confirm Password Field -->
-    <EditText
-        android:id="@+id/confirm_password_field"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LayoutConfirmPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:hint="Confirm Password"
-        android:background="@drawable/round"
-        android:padding="12dp"
-        android:inputType="textPassword"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginTop="10dp"
+        app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:startIconTint="#283593">
 
-    <!-- Sign Up Button -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
     <Button
         android:id="@+id/signup_button"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8E24AA"
         android:text="Sign Up"
-        android:backgroundTint="#7B1FA2"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="16dp"
-        android:gravity="center" />
+        android:textColor="#FFFFFF"
+        tools:ignore="TextSizeCheck" />
 
-    <!-- Login Text -->
+
     <TextView
-        android:id="@+id/login_text"
+        android:id="@+id/loginredirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account? Log in"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp" />
+        android:text="Already’t have an account? Login"
+        android:textSize="14sp"
+        android:textColor="#8E24AA"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
 </LinearLayout>

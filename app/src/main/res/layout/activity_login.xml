@@ -30,42 +30,45 @@
         android:layout_marginBottom="20dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Layout2Name"
+        android:id="@+id/Layout1Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
         app:endIconCheckable="true"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/email"
         app:startIconTint="#283593">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Loginname"
-            android:background="@drawable/round"
+            android:id="@+id/Login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Layout1Name"
+        android:id="@+id/Layout1Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:layout_marginTop="10dp"
         app:endIconCheckable="true"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
         app:startIconTint="#283593">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Pass"
-            android:background="@drawable/round"
+            android:id="@+id/Login_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text|textPersonName" />
+            android:inputType="text|textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/Login_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -74,17 +77,10 @@
         android:textColor="#FFFFFF"
         tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot password?"
-        android:textSize="14sp"
-        android:textColor="#8E24AA"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+
 
     <TextView
+        android:id="@+id/signupredirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don’t have an account? Sign Up"
